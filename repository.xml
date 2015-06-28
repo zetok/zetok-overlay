@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>tox-overlay</name>
+    <description lang="en">Zetok's overlay..</description>
+    <homepage>https://github.com/zetok/zetok-overlay</homepage>
+    <owner type="person">
+		<email>zetok@openmailbox.org</email>
+		<name>Zetok Zalbavar</name>
+    </owner>
+    <source type="git">git://github.com/zetok/zetok-overlay.git</source>
+    <feed>https://github.com/zetok/zetok-overlay/commits/master.atom</feed>
+  </repo>
+</repositories>

@@ -9,7 +9,7 @@
 		<email>zetok@openmailbox.org</email>
 		<name>Zetok Zalbavar</name>
     </owner>
-    <source type="git">git://gitlab.com/zetok/zetok-overlay.git</source>
+    <source type="git">https://gitlab.com/zetok/zetok-overlay.git</source>
     <feed>https://gitlab.com/zetok/zetok-overlay/commits/master.atom</feed>
   </repo>
 </repositories>

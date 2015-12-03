@@ -31,3 +31,8 @@ RDEPEND="
 	x11-libs/libxkbcommon
 	x11-libs/pango
 	"
+
+src_prepare() {
+	sed -i 's|set(CMAKE_C_FLAGS "-g")||' CMakeLists.txt || \
+		die 'Unable to remove debug flag'
+}

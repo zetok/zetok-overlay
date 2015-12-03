@@ -15,35 +15,30 @@ EGIT_REPO_URI="https://github.com/SirCmpwn/sway.git
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE='systemd'
 
-DEPEND="${RDEPEND}
+DEPEND="
+	${RDEPEND}
+	app-text/asciidoc
 	"
 
 RDEPEND="
-	app-text/asciidoc
 	dev-libs/json-c
 	dev-libs/libpcre
 	dev-libs/wlc
-	x11-base/xorg-server[wayland]"
-
+	x11-base/xorg-server[wayland]
+	x11-libs/cairo
+	x11-libs/libxkbcommon
+	x11-libs/pango
+	systemd? ( sys-apps/systemd )
+	"
 
 src_prepare() {
-	cmake-utils_src_prepare
-}
-
-src_configure() {
-	cmake-utils_src_configure
-}
-
-src_compile() {
-	cmake-utils_src_compile
-}
-
-src_test() {
-	cmake-utils_src_test
+	sed -i 's|set(CMAKE_C_FLAGS "-g")||' CMakeLists.txt || \
+		die 'Unable to remove debug flag'
 }
 
 src_install() {
 	cmake-utils_src_install
+	use !systemd && fperms u+s '/usr/bin/sway'
 }

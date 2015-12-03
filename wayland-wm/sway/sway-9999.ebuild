@@ -17,12 +17,17 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-DEPEND="${RDEPEND}
+DEPEND="
+	${RDEPEND}
+	app-text/asciidoc
 	"
 
 RDEPEND="
-	app-text/asciidoc
 	dev-libs/json-c
 	dev-libs/libpcre
 	dev-libs/wlc
-	x11-base/xorg-server[wayland]"
+	x11-base/xorg-server[wayland]
+	x11-libs/cairo
+	x11-libs/libxkbcommon
+	x11-libs/pango
+	"

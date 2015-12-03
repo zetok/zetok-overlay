@@ -26,24 +26,3 @@ RDEPEND="
 	dev-libs/libpcre
 	dev-libs/wlc
 	x11-base/xorg-server[wayland]"
-
-
-src_prepare() {
-	cmake-utils_src_prepare
-}
-
-src_configure() {
-	cmake-utils_src_configure
-}
-
-src_compile() {
-	cmake-utils_src_compile
-}
-
-src_test() {
-	cmake-utils_src_test
-}
-
-src_install() {
-	cmake-utils_src_install
-}
